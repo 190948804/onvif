@@ -13,12 +13,12 @@ import (
 	"github.com/juju/errors"
 	"github.com/rs/zerolog"
 
+	"github.com/190948804/onvif"
+	"github.com/190948804/onvif/gosoap"
+	"github.com/190948804/onvif/networking"
+	wsdiscovery "github.com/190948804/onvif/ws-discovery"
 	"github.com/beevik/etree"
 	"github.com/gin-gonic/gin"
-	"github.com/use-go/onvif"
-	"github.com/use-go/onvif/gosoap"
-	"github.com/use-go/onvif/networking"
-	wsdiscovery "github.com/use-go/onvif/ws-discovery"
 )
 
 var (
