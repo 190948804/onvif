@@ -145,7 +145,7 @@ type ContinuousMove struct {
 	XMLName      string               `xml:"tptz:ContinuousMove"`
 	ProfileToken onvif.ReferenceToken `xml:"tptz:ProfileToken"`
 	Velocity     onvif.PTZSpeed       `xml:"tptz:Velocity"`
-	Timeout      xsd.Duration         `xml:"tptz:Timeout"`
+	Timeout      *xsd.Duration        `xml:"tptz:Timeout"`
 }
 
 type ContinuousMoveResponse struct {
