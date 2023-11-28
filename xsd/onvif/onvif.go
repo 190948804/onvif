@@ -548,19 +548,19 @@ type PTZConfiguration struct {
 }
 
 type PTZSpeed struct {
-	PanTilt Vector2D `xml:"onvif:PanTilt"`
-	Zoom    Vector1D `xml:"onvif:Zoom"`
+	PanTilt *Vector2D `xml:"onvif:PanTilt"`
+	Zoom    *Vector1D `xml:"onvif:Zoom"`
 }
 
 type Vector2D struct {
-	X     float64    `xml:"x,attr"`
-	Y     float64    `xml:"y,attr"`
-	Space xsd.AnyURI `xml:"space,attr"`
+	X float64 `xml:"x,attr"`
+	Y float64 `xml:"y,attr"`
+	//Space xsd.AnyURI `xml:"space,attr"`
 }
 
 type Vector1D struct {
-	X     float64    `xml:"x,attr"`
-	Space xsd.AnyURI `xml:"space,attr"`
+	X float64 `xml:"x,attr"`
+	//Space xsd.AnyURI `xml:"space,attr"`
 }
 
 type PanTiltLimits struct {
