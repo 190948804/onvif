@@ -6,6 +6,7 @@ import (
 	"github.com/190948804/onvif/device"
 	"github.com/190948804/onvif/media"
 	"github.com/190948804/onvif/ptz"
+	"github.com/190948804/onvif/record"
 )
 
 func getPTZStructByName(name string) (interface{}, error) {
@@ -418,6 +419,16 @@ func getMediaStructByName(name string) (interface{}, error) {
 		return &media.CreateOSD{}, nil
 	case "DeleteOSD":
 		return &media.DeleteOSD{}, nil
+	default:
+		return nil, errors.New("there is no such method in the Media service")
+	}
+
+}
+
+func getRecordStructByName(name string) (interface{}, error) {
+	switch name {
+	case "GetRecordingConfiguration":
+		return &record.GetRecordingConfiguration{}, nil
 	default:
 		return nil, errors.New("there is no such method in the Media service")
 	}

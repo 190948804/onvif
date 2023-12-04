@@ -121,6 +121,8 @@ func callNecessaryMethod(serviceName, methodName, acceptedData, username, passwo
 		methodStruct, err = getPTZStructByName(methodName)
 	case "media":
 		methodStruct, err = getMediaStructByName(methodName)
+	case "record":
+		methodStruct, err = getRecordStructByName(methodName)
 	default:
 		return "", errors.New("there is no such service")
 	}

@@ -13,8 +13,8 @@ import (
 )
 
 const (
-	login    = "admin"
-	password = "Supervisor"
+	login    = "test"
+	password = "test1234"
 )
 
 func main() {

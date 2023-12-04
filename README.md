@@ -23,6 +23,7 @@ The following services are implemented:
 - Discovery
 - Auth(More Options)
 - Soap
+- Record
 
 ## Using
 
