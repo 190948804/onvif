@@ -20,9 +20,9 @@ func TestRecordingConfiguration(t *testing.T) {
 
 	//Getting an camera instance
 	dev, err := goonvif.NewDevice(goonvif.DeviceParams{
-		Xaddr:      "192.168.15.137:80",
-		Username:   login,
-		Password:   password,
+		Xaddr:      "192.168.58.2:80",
+		Username:   "admin",
+		Password:   "admin123",
 		HttpClient: new(http.Client),
 	})
 	if err != nil {

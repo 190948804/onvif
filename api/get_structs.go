@@ -7,6 +7,8 @@ import (
 	"github.com/190948804/onvif/media"
 	"github.com/190948804/onvif/ptz"
 	"github.com/190948804/onvif/record"
+	"github.com/190948804/onvif/replay"
+	"github.com/190948804/onvif/search"
 )
 
 func getPTZStructByName(name string) (interface{}, error) {
@@ -432,5 +434,26 @@ func getRecordStructByName(name string) (interface{}, error) {
 	default:
 		return nil, errors.New("there is no such method in the Media service")
 	}
+}
 
+func getSearchStructByName(name string) (interface{}, error) {
+	switch name {
+	case "GetRecordingSummary":
+		return &search.GetRecordingSummary{}, nil
+	default:
+		return nil, errors.New("there is no such method in the Media service")
+	}
+}
+
+func getReplayStructByName(name string) (interface{}, error) {
+	switch name {
+	case "GetServiceCapabilities":
+		return &replay.GetServiceCapabilities{}, nil
+	case "GetReplayUri":
+		return &replay.GetReplayUri{}, nil
+	case "GetReplayConfiguration":
+		return &replay.GetReplayConfiguration{}, nil
+	default:
+		return nil, errors.New("there is no such method in the Media service")
+	}
 }

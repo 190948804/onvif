@@ -52,6 +52,10 @@ type Track struct {
 type TrackConfiguration struct {
 	TrackType   string `xml:"TrackType"`
 	Description string `xml:"Description"`
+
+	TrackToken *string `xml:"TrackToken"`
+	DataFrom   *string `xml:"DataFrom"`
+	DataTo     *string `xml:"DataTo"`
 }
 
 type GetRecordingJobs struct {

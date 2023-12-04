@@ -123,6 +123,10 @@ func callNecessaryMethod(serviceName, methodName, acceptedData, username, passwo
 		methodStruct, err = getMediaStructByName(methodName)
 	case "record":
 		methodStruct, err = getRecordStructByName(methodName)
+	case "search":
+		methodStruct, err = getSearchStructByName(methodName)
+	case "replay":
+		methodStruct, err = getReplayStructByName(methodName)
 	default:
 		return "", errors.New("there is no such service")
 	}
@@ -179,6 +183,12 @@ func getEndpoint(service, xaddr string) (string, error) {
 		endpoint = dev.GetEndpoint("Media")
 	case "ptz":
 		endpoint = dev.GetEndpoint("PTZ")
+	case "record":
+		endpoint = dev.GetEndpoint("Record")
+	case "search":
+		endpoint = dev.GetEndpoint("Search")
+	case "replay":
+		endpoint = dev.GetEndpoint("Replay")
 	}
 	return endpoint, nil
 }

@@ -35,6 +35,8 @@ var Xlmns = map[string]string{
 	"wsrf-rw": "http://docs.oasis-open.org/wsrf/rw-2",
 	"wsaw":    "http://www.w3.org/2006/05/addressing/wsdl",
 	"trc":     "http://www.onvif.org/ver10/recording/wsdl",
+	"tse":     "http://www.onvif.org/ver10/search/wsdl",
+	"trp":     "http://www.onvif.org/ver10/replay/wsdl",
 }
 
 // DeviceType alias for int
